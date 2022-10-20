@@ -21,35 +21,36 @@ body {
     z-index: 1000;
 }
 
-#navegar h1{
+#navegar h1 {
     margin-right: 500px;
     margin-top: 50px;
     font-size: 25px;
 }
 
-#navegar ul{
+#navegar ul {
     display: flex;
     margin-right: 50px;
     flex-direction: row;
 }
 
-#navegar ul li a{
+#navegar ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Teko', sans-serif;
+    width: 125px;
     border-radius: 10px;
     font-size: 25px;
     text-decoration: none;
     color: black;
 }
 
-#navegar ul li a:hover{
+#navegar ul li a:hover {
     border-radius: 10px;
     box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.685);
 }
 
-#navegar ul li{
+#navegar ul li {
     display: flex;
     padding: 25px 10px 0px 10px;
     list-style: none;
@@ -57,11 +58,7 @@ body {
 
 /* wpp */
 
-#wpp{
-    background-color: red;
-}
-
-#wpp article i{
+#wpp article i {
     display: flex;
     position: fixed;
     align-items: center;
@@ -81,25 +78,25 @@ body {
     z-index: 999;
 }
 
-#wpp article i:hover{
+#wpp article i:hover {
     box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.685);
 }
 
 /* body */
 
-#corpo{
+#corpo {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#corpo section{
+#corpo section {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#corpo section img{
+#corpo section img {
     margin-top: 10px;
     border-radius: 15px;
     width: 1650px;
@@ -108,19 +105,125 @@ body {
 
 /* gif */
 
-#walking img{
+#walking section img {
     position: absolute;
     height: 300px;
     width: 300px;
     animation: walking 10s infinite linear;
 }
 
-@keyframes walking{
-    from{
-        left: -125px;
+@keyframes walking {
+    from {
+        left: -300px;
     }
 
-    to{
+    to {
         left: 100%;
     }
+}
+
+@media only screen and (max-width: 600px) {
+    
+    /* Navbar */
+
+    #navegar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: transparent;
+    }
+
+    #navegar h1 {
+        display: none;
+    }
+
+    #navegar ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #navegar ul li a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Teko', sans-serif;
+        width: 100%;
+        border-radius: 10px;
+        font-size: 12px;
+        text-decoration: none;
+        color: black;
+    }
+
+    #navegar ul li {
+        display: flex;
+        padding: 0px 0px 0px 15px;
+        list-style: none;
+    }
+
+    /* body */
+
+    #corpo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #corpo section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #corpo section img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        border-radius: 15px;
+        width: 97%;
+        height: 250px;
+    }
+
+    /* wpp */
+
+    #wpp article i {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        bottom: 25px;
+        right: 25px;
+        font-size: 35px;
+        color: white;
+        cursor: pointer;
+        background-color: rgb(37, 211, 102);
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-items: end;
+        z-index: 999;
+    }
+
+    /* gif */
+
+    #walking section img {
+        position: absolute fixed;
+        height: 100px;
+        width: 100px;
+        animation: walking 5s infinite linear;
+    }
+
+    @keyframes walking {
+        from {
+            left: -100px;
+        }
+
+        to {
+            left:100%;
+        }
+    }
+
 }
