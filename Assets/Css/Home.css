@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+body {
+    background-color: rgba(245, 243, 234, 0.815);
+    overflow-x: hidden;
+}
+
+/* Navbar */
+
+#navegar {
+    top: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 25px;
+    z-index: 1000;
+}
+
+#navegar h1{
+    margin-right: 500px;
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+#navegar ul{
+    display: flex;
+    margin-right: 50px;
+    flex-direction: row;
+}
+
+#navegar ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Teko', sans-serif;
+    border-radius: 10px;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+#navegar ul li a:hover{
+    border-radius: 10px;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.685);
+}
+
+#navegar ul li{
+    display: flex;
+    padding: 25px 10px 0px 10px;
+    list-style: none;
+}
+
+/* wpp */
+
+#wpp{
+    background-color: red;
+}
+
+#wpp article i{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    bottom: 25px;
+    right: 25px;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(37, 211, 102);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-items: end;
+    z-index: 999;
+}
+
+#wpp article i:hover{
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.685);
+}
+
+/* body */
+
+#corpo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#corpo section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#corpo section img{
+    margin-top: 10px;
+    border-radius: 15px;
+    width: 1650px;
+    height: 750px;
+}
+
+/* gif */
+
+#walking img{
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    animation: walking 10s infinite linear;
+}
+
+@keyframes walking{
+    from{
+        left: -125px;
+    }
+
+    to{
+        left: 100%;
+    }
+}
