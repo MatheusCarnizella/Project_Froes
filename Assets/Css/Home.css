@@ -33,10 +33,13 @@ body {
     flex-direction: row;
 }
 
-#navegar ul li a {
+.outt{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#navegar ul li a {
     font-family: 'Teko', sans-serif;
     padding: 0px 15px 0px 15px;
     border-radius: 25px;
@@ -104,9 +107,19 @@ body {
 
 #corpo section img {
     margin-top: 10px;
-    border-radius: 15px;
-    width: 1640px;
-    height: 750px;
+    border-radius: 25px;
+    width: 350px;
+    height: 700px;
+    padding-right: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+    filter: grayscale(1);
+    transition: 0.5s;
+}
+
+#corpo section img:hover {
+    filter: grayscale(0);
+    transform: scale(1.1,1.1);
 }
 
 #local article {
@@ -186,26 +199,28 @@ body {
         flex-direction: row;
     }
 
+    .outt{
+        display: none;
+    }
+
     #navegar ul li a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         font-family: 'Teko', sans-serif;
-        padding: 0px 1px 0px 1px;
+        padding: 0px 10px 0px 10px;
         width: 100%;
         border-radius: 10px;
-        font-size: 12px;
+        font-size: 25px;
         text-decoration: none;
         color: black;
     }
 
-    #navegar ul li a i {
-        font-size: 12px;
+    #navegar ul li a i{
+        font-size: 20px;
     }
 
     #navegar ul li {
         display: flex;
-        padding: 0px 0px 0px 15px;
+        padding: 0px 15px 0px 15px; 
+        margin-left: -20px;       
         list-style: none;
     }
 
@@ -227,10 +242,17 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 75px;
+        height: 200px;
+        padding-right: 5px;
+        padding-left: 5px;
         margin-top: 0px;
-        border-radius: 15px;
-        width: 97%;
-        height: 250px;
+        filter: grayscale(0);
+        border-radius: 18px;
+    }
+
+    #corpo section img:hover {
+        display: none;
     }
 
     #local article {
@@ -258,7 +280,7 @@ body {
     }
 
     #local section iframe {
-        width: 99%;
+        width: 93%;
         height: 45vh;
         display: flex;
         border-radius: 25px;
